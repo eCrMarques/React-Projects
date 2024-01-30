@@ -27,7 +27,11 @@ function Poke(props) {
   const pokeId = props.poke;
   const [pokeInfo, setPokeInfo] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [favorite, setFavorite]= useState(false)
 
+  function enviar(data,name){
+    props.msg(data,name)}
+  
   const procurarPokemon = async (pokemon) => {
     let url = 'https://pokeapi.co/api/v2/pokemon/' + pokemon;
     const response = await fetch(url);
@@ -57,7 +61,6 @@ function Poke(props) {
     return null;
   }
   {pokeInfo.sprites.other.home.front_default?pokeInfo.sprites.other.home.front_default:pokeInfo.sprites.other.home.front_default=`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokeInfo.id}.png`?und:und}
-
   return (
     <div id="dBg"
       className="dBg"
@@ -77,7 +80,9 @@ function Poke(props) {
           pokeInfo.height < 10 ? `0.${pokeInfo.height}` : `${pokeInfo.height}`.slice(0, 1) + '.' + `${pokeInfo.height}`.slice(-1, 2)} M</div>
         <div>{pokeInfo.weight / 10} KG</div>
       </div>
-      <button className="Detalhe">Salvar
+      <button className="Detalhe"
+      onClick={()=>{enviar([pokeInfo.sprites.other.home.front_default],pokeInfo.name)}}
+      >Salvar
       </button>
       <img src={logo} alt="" className="logo" />
     </div>
