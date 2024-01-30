@@ -36,7 +36,7 @@ body {
     
 }
 body::-webkit-scrollbar {
-    width: 20px;
+    width: 15px;
   }
   body {
     scrollbar-width:thin;
@@ -56,22 +56,19 @@ body::-webkit-scrollbar {
     top: 0;
     position: absolute;
     display: flex;
-    justify-content: center;
-    
     flex-direction: row-reverse;
-    width: 933px;
-    height: 11.5vh;
+    width: 806px;
+    height: 104px;
     border-radius: 0px 0px 15px 15px;
     background: #03063770;
     border: 7px solid #72040895;
     border-top: none;
+    overflow: scroll;
     overflow-x:auto;
     overflow-y: hidden;
-   
-
 }
 .topBar::-webkit-scrollbar {
-    height: 15px;
+    height: 12px;
 
 
   }
@@ -87,9 +84,9 @@ body::-webkit-scrollbar {
 }
 .recentPoke{
     display:flex;
-    margin-left: 30px;
     align-items: center;
-    width: 7vh;
+
+    margin-left: 10px;
 
 }
 .iconRecent {
@@ -98,8 +95,8 @@ body::-webkit-scrollbar {
     background-position: center;
     background-size: 10vh;
     background-color: rgba(202, 37, 79, 0.501);
-    width: 7vh;
-    height: 7vh;
+    width: 10vh;
+    height: 10vh;
     border-radius: 100%;
     border: .7vh solid rgb(198, 15, 15);
     transition: all 100ms;
@@ -132,6 +129,7 @@ body::-webkit-scrollbar {
     border: 2px solid gray;
     border-radius: 10px;
     overflow: hidden;
+    transition: 300ms;
 }
 
 .mainBar .select {
@@ -184,7 +182,7 @@ input:focus::placeholder {
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    width: 900px;
+    width: 800px;
     height: 1500px;
     max-height: 60%;
     gap: 35px;
@@ -198,14 +196,14 @@ input:focus::placeholder {
 }
 
 .dBg {
-    margin-top: 120px;
+    margin-top: 150px;
     margin-bottom: 10px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     flex-direction: column;
-    width: 230px;
-    height: 320px;
+    width: 200px;
+    height: 290px;
     background: rgb(25, 24, 37);
     border: 3px solid rgb(56, 122, 58);
     border-radius: 20px; 
@@ -282,11 +280,11 @@ input:focus::placeholder {
 }
 
 .Detalhe {
-    background: #ba64b4b8;
+    background: #a70591df;
     color: #000000;
     border-radius: 7px;
     border-style: none;
-    width: 60%;
+    width: 40%;
     height: 10%;
     margin-bottom: 25px;
     margin-top: 15px;
@@ -308,7 +306,7 @@ input:focus::placeholder {
 .Detalhe:hover {
     transform: scale(1.2);
     position: relative;
-    background: #bd3787d7;
+    background: #ff0090d7;
     cursor: pointer;
     outline: none;
 }
@@ -324,6 +322,7 @@ input:focus::placeholder {
     border-bottom-left-radius: 2vh;
     width: 10%;
     height: 4%;
+    max-width: 100%;
     font-size:2vh;
     position: fixed;
     right: 9px;
@@ -362,4 +361,33 @@ input:focus::placeholder {
     background-color:  #6c2424;
     outline: none;
     border:none;
+}
+
+@media screen and (max-width : 900px){
+    body::-webkit-scrollbar {
+        width: 13px;
+      }
+    .topBar::-webkit-scrollbar {
+        height: 10px;
+      }
+    .topBar{
+        width: 645px;
+    }
+    .mainBar{
+        width: 600px;
+    }
+    .Dex{
+        width: 645px;
+    }
+    .dBg {
+        margin-top: 165px;
+        width: 180px;
+        height: 270px;
+    }
+    .types > div {
+        width: 40px;
+    }
+    .logo {
+        width: 90%;
+    }
 }
