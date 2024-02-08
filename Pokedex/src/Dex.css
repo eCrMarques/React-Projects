@@ -4,6 +4,7 @@
     font-family: 'roboto', sans-serif;
     --scrollbarColor:rgba(98, 127, 178, 0.32);
     --scrollColor:rgba(100, 22, 26, 0.853);
+    user-select: none;
 }
 
 .normal{background: #A8A77A;}
@@ -280,7 +281,7 @@ input:focus::placeholder {
 }
 
 .Detalhe {
-    background: #a70591df;
+    background: rgba(165, 32, 136, 0.527);
     color: #000000;
     border-radius: 7px;
     border-style: none;
@@ -290,6 +291,7 @@ input:focus::placeholder {
     margin-top: 15px;
     z-index: 2;
     transition: all 80ms;
+    box-shadow: 0px 0px 5px 5px purple;
 
 
 
@@ -300,13 +302,13 @@ input:focus::placeholder {
     position: absolute;
     background-image: url(assets/heart.png);
     position: absolute;
-    background: #da128a;
+    background: #da128a88;
 }
 
 .Detalhe:hover {
     transform: scale(1.2);
     position: relative;
-    background: #ff0090d7;
+    background: #ff00dd93;
     cursor: pointer;
     outline: none;
 }
